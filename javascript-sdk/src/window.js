@@ -5,7 +5,7 @@
 import { getLogger } from "./log"
 
 export function isWindowAvailable(warnMsg = undefined) {
-  let windowAvailable = !!globalThis.window
+  let windowAvailable = !!globalThis.window.location;
   if (!windowAvailable && warnMsg) {
     getLogger().warn(warnMsg);
   }
