@@ -560,7 +560,7 @@ class JitsuClientImpl implements JitsuClient {
       this.cookiePolicy !== "keep" ? `&cookie_policy=${this.cookiePolicy}` : "";
     let ipPolicy =
       this.ipPolicy !== "keep" ? `&ip_policy=${this.ipPolicy}` : "";
-    let urlPrefix = isWindowAvailable() ? "/api/v1/event" : "/api/v1/s2s/event";
+    let urlPrefix = this.apiKey.split('.')[0] ==='s2s' ? "/api/v1/s2s/event": "/api/v1/event";
     let url = `${this.trackingHost}${urlPrefix}?token=${this.apiKey}${cookiePolicy}${ipPolicy}`;
     if (this.randomizeUrl) {
       url = `${
