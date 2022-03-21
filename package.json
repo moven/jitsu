@@ -2,12 +2,12 @@
   "name": "@jitsu/sdk-js",
   "version": "2.4.0",
   "description": "Jitsu JavaScript SDK (more at http://jitsu.com/docs/js-sdk)",
-  "main": "dist/npm/jitsu.cjs.js",
-  "module": "dist/npm/dist/jitsu.es.js",
-  "types": "dist/npm/jitsu.d.ts",
+  "main": "javascript-sdk/dist/npm/jitsu.cjs.js",
+  "module": "javascript-sdk/dist/npm/dist/jitsu.es.js",
+  "types": "javascript-sdk/dist/npm/jitsu.d.ts",
   "files": [
-    "dist/npm/*",
-    "dist/web/*"
+    "javascript-sdk/dist/npm/*",
+    "javascript-sdk/dist/web/*"
   ],
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   "private": false,
   "author": "Jitsu Dev <dev@jitsu.com>",
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./javascript-sdk/dist",
     "devserver": "PORT=8081 nodemon --watch '__tests__/common/*.ts' --exec 'ts-node' __tests__/common/devserver.ts",
     "test": "rollup -c && jest --detectOpenHandles --verbose false",
     "build": "rollup -c"
